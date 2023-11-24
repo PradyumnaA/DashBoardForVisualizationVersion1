@@ -5,5 +5,11 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import App from './App';
 import './index.css'
+import { ContextProvider } from './contexts/ContextProvider';
+ReactDOM.render
+(
+<ContextProvider>
+<App />
+</ContextProvider>
+, document.getElementById('root'));
 
-ReactDOM.render(<App />, document.getElementById('root'));
