@@ -61,12 +61,12 @@ const App = () => {
         <Navbar/>
 
       </div>
-      </div>
+      
       <div>
         <Routes>
           {/* Dashboard */}
-          <Route path="/" element={<Ecommerce/>}/>
-          <Route path="/ecommerce" element="ECommerce"/>
+          <Route path="/ecommerce" element={<Ecommerce/>}/>
+          
 
           <Route path="/orders" element={<Orders/>}/>
           <Route path="/employees" element={<Employees/>}/>
@@ -89,6 +89,7 @@ const App = () => {
          <Route path="/stacked" element={<Stacked/>}/>
 
         </Routes>
+      </div>
       </div>
     </div>
     </BrowserRouter>
