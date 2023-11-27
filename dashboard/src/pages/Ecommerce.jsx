@@ -1,7 +1,9 @@
 import React from 'react';
-import { Stacked, Pie, Button, SparkLine } from '../components';
-import { earningData, SparklineAreaData, ecomPieChartData } from '../data/dummy';
+import { Stacked, Pie, Button,SparkingLine} from '../components';
+
+import { earningData,SparklineAreaData, ecomPieChartData } from '../data/dummy';
 import { useStateContext } from '../contexts/ContextProvider';
+import {GoDotFill} from 'react-icons/go'
 
 const Ecommerce = () => {
   const divStyle = {
@@ -14,7 +16,7 @@ const Ecommerce = () => {
     padding: '2rem',
     paddingTop: '2.25rem',
     backgroundColor: '#dbe5db',
-    backGroundSize: 'cover',
+    backgroundSize: 'cover',
     backgroundPosition: 'center',
     marginLeft: '5em',
     marginBottom: '1em', // Add some space at the bottom
@@ -86,8 +88,95 @@ const Ecommerce = () => {
 
         </div>
       </div>
-      <div>
-        Revenue here
+      <div className='flex gap-10 
+      flex-wrap justify-center'>
+        <div className='bg-white dark:text-gray-200
+        dark:bg-secondary-dark-bg
+        m-3 p-4 rounded-2xl md:w-780'>
+          <div className='flex justify-between'>
+            <p className='font-semibold
+            text-xl'>Revenue Updates</p>
+            <div className='flex 
+            items-center gap-4'>
+
+              <p className='flex 
+              items-center 
+              gap-2 
+              text-gray-600 
+              hover:drop-shadow-xl'>
+                <div className='ml-5'>
+                <span>
+                  <GoDotFill/>
+                </span>
+                <span>Expense</span>
+                </div>
+               
+              </p>
+              <p className='flex
+               items-center 
+               gap-2 
+               text-green-400 
+               hover:drop-shadow-xl'>
+                <div className='ml-5'>
+                <span>
+                  <GoDotFill/>
+                </span>
+                <span>Budget</span>
+                </div>
+               
+              </p>
+                  
+            </div>
+          </div>
+              <div className='mt-10 flex gap flex-wrap justify-center'>
+                  <div className='border-r-1
+                  border-color 
+                  m-4 pr-10'>
+                    <div>
+                      <p>
+                        <span className='text-3xl
+                        font-semibold'>$93000</span>
+                        <span className='p-1.5
+                        hover:drop-shadow-xl
+                        cursor-pointer
+                        rounded-full
+                        text-white
+                        bg-green-400
+                        ml-3
+                        text-xs'>45%</span>
+                      </p>
+                      <p className='text-gray-500
+                      mt-1'>
+                        Budget
+                      </p>
+                    </div>
+                    <div>
+                      <p>
+                        <span className='text-3xl
+                        font-semibold'>$50000</span>
+                        
+                      </p>
+                      <p className='text-gray-500
+                      mt-1'>
+                        Expense
+                      </p>
+                    </div>
+
+                    <div className='mt-5'>
+                      <SparkingLine
+                      color="blue"
+                      id="line-sparkline"
+                      type="Line"
+                      height="80px"
+                      width="250px"
+                      data={SparklineAreaData}
+                      
+                      />
+                    </div>
+
+                  </div>
+              </div>
+        </div>
       </div>
     </div>
   );
